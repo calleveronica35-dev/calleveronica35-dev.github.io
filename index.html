@@ -7,6 +7,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
+<!--CSS-->
+
 <style>
 body {
     margin: 0;
@@ -35,6 +37,353 @@ header h1 {
 
 header p {
     margin: 5px 0;
+    font-size: 16px;
+}
+
+section {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.perfil img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #6b0000;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.perfil h2 {
+    font-family: 'Playfair Display', serif;
+    margin-top: 20px;
+    color: #6b0000;
+}
+
+.servicio {
+    background: white;
+    margin: 12px auto;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #6b0000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.servicio-titulo {
+    padding: 15px;
+    font-weight: bold;
+}
+
+.servicio-descripcion {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    font-weight: normal;
+    background-color: #fafafa;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.servicio.activo .servicio-descripcion {
+    max-height: 200px;
+    padding: 10px 15px 15px 15px;
+}
+
+.acordeon-item {
+    max-width: 500px;
+    margin: 12px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.acordeon-titulo {
+    width: 100%;
+    background: white;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-left: 5px solid #6b0000;
+    transition: background 0.3s;
+}
+
+.acordeon-titulo:hover {
+    background-color: #f1f1f1;
+}
+
+.acordeon-contenido {
+    max-height: 0;
+    overflow: hidden;
+    background: #fafafa;
+    transition: max-height 0.4s ease;
+    padding: 0 15px;
+}
+
+.acordeon-contenido p {
+    margin: 15px 0;
+    font-weight: normal;
+}
+
+
+.boton {
+    display: block;
+    text-align: center;
+    background-color: #6b0000;
+    color: white;
+    padding: 15px;
+    margin: 30px auto;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 300px;
+}
+
+.qr-section img {
+    width: 200px;
+    margin-top: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.caracteristicas {
+    background-color: #f8f8f8;
+    padding: 30px 20px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.caracteristicas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
+}
+
+.caracteristica {
+    color: #6b0000;
+}
+
+.icono {
+    margin-bottom: 10px;
+}
+
+.icono img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.icono svg {
+    width: 50px;
+    height: 50px;
+    color: #6b0000;   /* tu bordo institucional */
+}
+
+.caracteristica p {
+    margin: 0;
+    font-weight: 600;
+}
+
+footer {
+    background: #3b0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    .caracteristicas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
+<!--HTML-->
+
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>⚖️ Dra. Calle Ojeda</h1>
+        <p>Estudio Jurídico</p>
+        <p>Derecho de Familia y Derecho Civil</p>
+        <p>Bellavista – San Miguel, Buenos Aires</p>
+    </div>
+</header>
+
+<section class="perfil">
+    <img src="dra-calle.jpg" alt="Dra. Calle Ojeda">
+    <h2>Compromiso, Ética y Profesionalismo</h2>
+    <p>
+        Brindo asesoramiento legal integral en conflictos familiares y asuntos civiles,
+        ofreciendo atención personalizada y soluciones jurídicas eficientes.
+    </p>
+</section>
+
+<section>
+    <h2 style="font-family:'Playfair Display', serif; color:#6b0000;">Áreas de Práctica</h2>
+    <div class="servicios">
+        <div class="servicio">
+            <div class="servicio-titulo">Divorcios</div>
+            <div class="servicio-descripcion">
+                Asesoramiento y representación en divorcios unilaterales y de común acuerdo,
+                incluyendo acuerdos regulatorios, contrapropuestas, liquidación de bienes y compensación económica.
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="servicio-titulo">Cuota Alimentaria</div>
+            <div class="servicio-descripcion">
+                Incluye reclamos, ajustes, ejecuciones y acuerdos sobre cuota alimentaria.
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="servicio-titulo">Régimen de Comunicación</div>
+            <div class="servicio-descripcion">
+                Tanto unilateral o compartido e incluso modificación del régimen de visitas y comunicación, en casos graves impedimento de contacto.
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="servicio-titulo">Sucesiones</div>
+            <div class="servicio-descripcion">
+                Tramitación completa de sucesiones, incluye apertura de sucesión, declaratoria de herederos, inventario y avalúo, partición y adjudicación e inscripción de bienes.
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="servicio-titulo">Daños y Perjuicios</div>
+            <div class="servicio-descripcion">
+                Daño emergente (lo que efectivamente se perdió)<br>
+                Lucro cesante (ganancia frustrada)<br>
+                Pérdida de chance<br>
+                Daño moral<br>
+                Afectaciones espirituales<br>
+                Daño a la integridad psicofísica<br>
+            </div>
+        </div>
+
+        <div class="servicio">
+            <div class="servicio-titulo">Regularización Migratoria</div>
+            <div class="servicio-descripcion">
+                Asistencia en trámites de residencia y ciudadanía.
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="caracteristicas">
+    <h2 style="font-family:'Playfair Display', serif; color:#6b0000;">
+        Compromiso Profesional
+    </h2>
+
+    <div class="caracteristicas-grid">
+        <div class="caracteristica">
+            <div class="icono">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Laptop -->
+                    <rect x="14" y="18" width="36" height="24" rx="2"/>
+                    <line x1="8" y1="46" x2="56" y2="46"/>
+                    <!-- Location pin -->
+                    <path d="M32 24
+                             c-4 0-7 3-7 7
+                             c0 5 7 11 7 11
+                             s7-6 7-11
+                             c0-4-3-7-7-7z"/>
+                    <circle cx="32" cy="31" r="2"/>
+                  </g>
+                </svg>
+            </div>
+
+            <p>Honorarios claros<br> y facilidades de pago</p>
+        </div>
+
+        <div class="caracteristica">
+            <div class="icono">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                  <g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <!-- Card -->
+                    <rect x="8" y="16" width="40" height="26" rx="3"/>
+                    <line x1="8" y1="24" x2="48" y2="24"/>
+                    <line x1="14" y1="34" x2="26" y2="34"/>
+                    <!-- Coin -->
+                    <circle cx="50" cy="40" r="10"/>
+                    <path d="M50 34 v12"/>
+                    <path d="M46 36 c1.5-2 6.5-2 8 0
+                             c1.5 2-1 4-4 4
+                             s-5 2-4 4
+                             c1.5 2 6.5 2 8 0"/>
+                  </g>
+                </svg>
+            </div>
+
+            <p>Opciones de consulta<br> online o presencial</p>
+        </div>
+    </div>
+</section>
+
+
+<a class="boton" 
+href="https://wa.me/5491134760608" 
+target="_blank">
+📞 Realizar Consulta
+</a>
+
+<a class="boton" 
+href="mailto:calleveronica35@gmail.com"
+target="_blank">
+✉️ Enviar Email
+</a>
+
+<a class="boton" 
+href="https://www.facebook.com/share/1akcaBSf9c/" 
+target="_blank">
+📲 Visitar Facebook
+</a>
+
+<!-- <section class="qr-section" style="text-align:center;">
+    <img src="qr-dra-calle.png" alt="QR contacto">
+    <p><strong>Escaneá para contactarme directamente</strong></p>
+</section> -->
+
+<footer>
+    © 2026 Dra. Calle Ojeda - Estudio Jurídico
+</footer>
+
+<script>
+document.querySelectorAll(".servicio").forEach(item => {
+    item.addEventListener("click", () => {
+
+        // Cierra los demás
+        document.querySelectorAll(".servicio").forEach(el => {
+            if (el !== item) {
+                el.classList.remove("activo");
+            }
+        });
+
+        // Alterna el actual
+        item.classList.toggle("activo");
+    });
+});
+</script>
+
+
+</body>
+                </html>    margin: 5px 0;
     font-size: 16px;
 }
 
